@@ -1,0 +1,457 @@
+/* App.css */
+
+/* Global Styles */
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
+  }
+  
+  
+  body {
+    font-family: 'BMWTypeNextLatin', sans-serif; /* Replace with BMW font */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Underline effect */
+  .header__menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+  }
+  
+  .header__menu-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Featured Content Styles */
+  .featured-content {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center; /* Center the titles and descriptions */
+  }
+  
+  .featured-content .section-title {
+    margin-bottom: 40px;
+  }
+  
+  /* Teaser Styles */
+  .teaser {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .teaser:hover {
+    transform: scale(1.03);
+  }
+  
+  .teaser__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .teaser__content {
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .teaser__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #222;
+  }
+  
+  .teaser__subtitle {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Grids */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .grid--3col .grid__item {
+    width: calc(33.33% - 20px);
+  }
+  
+  .grid--4col .grid__item {
+    width: calc(25% - 20px);
+  }
+  
+  /* Listicle Section Styles */
+  .listicle-section {
+    background-color: #f0f0f0; /* Soft gray */
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .listicle {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Highlight Section Styles */
+  .highlight-section {
+    background-color: #e9ecef; /* Light gray */
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .highlight {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Featured Models Section Styles */
+  .featured-models {
+    background-color: #fff;
+    padding: 50px 0;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+  
+    .section {
+      padding: 30px 0;
+    }
+  
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .grid--3col .grid__item,
+    .grid--4col .grid__item {
+      width: calc(50% - 20px); /* Two columns on smaller screens */
+    }
+  
+    /*Even smaller screens, one column*/
+    @media (max-width: 576px){
+      .grid--3col .grid__item,
+      .grid--4col .grid__item {
+        width: 100%; /*Stack them*/
+      }
+    }
+  }
+  
+  /* Utility classes (start with u-) */
+  .u-text-center {
+    text-align: center !important;
+  }
+  
+  /* App.css - Continued */
+  
+  /* Global Styles */
+  body {
+    font-family: 'BMWTypeNextLatin', sans-serif; /* Replace with BMW font */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .header__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+    height: 60px;
+  }
+  
+  .header__slogan {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .header__slogan strong {
+    font-weight: bold;
+  }
+  
+  .header__nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .header__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .header__menu-item {
+    margin-left: 20px;
+  }
+  
+  .header__menu-link {
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .header__menu-link:hover {
+    color: #007bff; /* BMW Blue */
+  }
+  
+  /* Underline effect */
+  .header__menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+  }
+  
+  .header__menu-link:hover::after {
+    width: 100%;
+  }
+  
+  .header--hidden {
+    top: -80px; /* Height of the header, or more to fully hide */
+  }
+  
+  /* Mobile menu toggle */
+  .header__menu-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    display: none; /* Hidden by default on larger screens */
+  }
+  
+  /* Add this class when menu is open */
+  .header__nav--open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+     .header {
+      position: fixed;
+      width: 100%;
+    }
+  
+    .header__row {
+      flex-direction: column;
+      align-items: center;
+      height: 60px;
+    }
+  
+    .header__nav {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #fff;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+  
+    .header__menu-toggle {
+      display: block;
+      margin-top: 10px;
+      align-self: flex-end;
+      margin-left: auto; /* Push it to the right */
+      order: -1; /* Moves it to the start of flexbox direction*/
+    }
+  
+    .header__menu {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .header__menu-item {
+      margin: 0;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+  }
